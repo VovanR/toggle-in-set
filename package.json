@@ -1,0 +1,55 @@
+{
+  "name": "toggle-in-set",
+  "version": "0.1.0",
+  "description": "Add or remove item from Set",
+  "license": "MIT",
+  "repository": "VovanR/toggle-in-set",
+  "author": "Vladimir Rodkin <mail@vovanr.com> (https://github.com/VovanR)",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "xo --no-esnext && nyc ava",
+    "tdd": "ava -w",
+    "release-patch": "mversion patch",
+    "release-minor": "mversion minor",
+    "release-major": "mversion major",
+    "deploy": "gh-pages-deploy"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "array",
+    "toggle"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^3.8.2",
+    "conventional-changelog-cli": "^2.0.34",
+    "coveralls": "^3.1.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
+    "mversion": "^1.13.0",
+    "nyc": "^15.1.0",
+    "xo": "^0.32.0"
+  },
+  "bugs": {
+    "url": "https://github.com/VovanR/toggle-in-set/issues"
+  },
+  "homepage": "https://github.com/VovanR/toggle-in-set#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "xo": {
+    "space": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
+  }
+}
