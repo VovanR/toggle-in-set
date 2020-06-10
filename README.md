@@ -32,16 +32,16 @@ toggleInSet(new Set([1, 2, 3]), 4)
 
 ## API
 
-### `toggleInSet(array, value)`
+### `toggleInSet(set, value)`
 
 Returns an `Set` with `value` if `set` is not includes this `value`<br>
 Returns an `Set` without `value` if `set` is includes this `value`
 
-#### array
+#### set
 *Required*<br>
 Type: `Set`
 
-Array with values needs to toggle
+Set with values needs to toggle
 
 #### value
 *Required*<br>
