@@ -22,44 +22,33 @@ npm install --save toggle-in-set
 ```js
 var toggleInSet = require('toggle-in-set');
 
-toggleInSet([1, 2, 3], 2)
-//=> [1, 3]
+toggleInSet(new Set([1, 2, 3]), 2)
+//=> Set(2) {1, 3}
 
-toggleInSet([1, 2, 3], 4)
+toggleInSet(new Set([1, 2, 3]), 4)
 //=> [1, 2, 3, 4]
-
-toggleInSet(
-  [{v: 1}, {v: 2}, {v: 3}],
-  {v: 2},
-  (a, b) => a.v === b.v
-)
-//=> [{v: 1}, {v: 3}]
+//=> Set(4) {1, 2, 3, 4}
 ```
 
 ## API
 
-### `toggleInSet(array, value, [predicate])`
+### `toggleInSet(array, value)`
 
-Returns an `Array` with `value` if `array` is not includes this `value`<br>
-Returns an `Array` without `value` if `array` is includes this `value`
+Returns an `Set` with `value` if `set` is not includes this `value`<br>
+Returns an `Set` without `value` if `set` is includes this `value`
 
 #### array
 *Required*<br>
-Type: `Array`
+Type: `Set`
 
 Array with values needs to toggle
 
 #### value
 *Required*<br>
-Type: `Array`
+Type: `*`
 
-Value to toggle in `array`
+Value to toggle in `set`
 
-#### predicate
-Type: `Function`<br>
-Default: `(a, b) => a === b` *Strict equality comparison*
-
-Function that compare each `array` item to equal `value`
 
 ## License
 MIT © [Vladimir Rodkin](https://github.com/VovanR)
