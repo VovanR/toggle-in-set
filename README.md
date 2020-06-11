@@ -22,11 +22,10 @@ npm install --save toggle-in-set
 ```js
 var toggleInSet = require('toggle-in-set');
 
-toggleInSet(new Set([1, 2, 3]), 2)
+toggleInSet(new Set([1, 2, 3]), 2);
 //=> Set(2) {1, 3}
 
-toggleInSet(new Set([1, 2, 3]), 4)
-//=> [1, 2, 3, 4]
+toggleInSet(new Set([1, 2, 3]), 4);
 //=> Set(4) {1, 2, 3, 4}
 ```
 
