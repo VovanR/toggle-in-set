@@ -1,5 +1,5 @@
 name: Tests
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -26,3 +26,8 @@ jobs:
       - run: npm test
         env:
           CI: true
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
