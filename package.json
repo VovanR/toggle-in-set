@@ -4,48 +4,57 @@
   "description": "Add or remove item from Set",
   "license": "MIT",
   "repository": "VovanR/toggle-in-set",
+  "homepage": "https://github.com/VovanR/toggle-in-set#readme",
+  "bugs": "https://github.com/VovanR/toggle-in-set/issues",
   "author": "Vladimir Rodkin <mail@vovanr.com> (https://github.com/VovanR)",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "main": "index.js",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "test": "xo --no-esnext && nyc ava",
+    "test": "clinton && xo && nyc ava",
     "tdd": "ava -w",
     "release-patch": "mversion patch",
     "release-minor": "mversion minor",
-    "release-major": "mversion major",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "release-major": "mversion major"
   },
   "files": [
     "index.js"
   ],
-  "main": "index.js",
   "keywords": [
     "array",
     "toggle"
   ],
   "dependencies": {},
   "devDependencies": {
-    "ava": "^3.9.0",
-    "conventional-changelog-cli": "^2.0.34",
-    "coveralls": "^3.1.0",
-    "cz-conventional-changelog": "^3.2.0",
-    "husky": "^4.2.5",
-    "mversion": "^2.0.1",
-    "nyc": "^15.1.0",
-    "xo": "^0.32.0"
+    "ava": "3.13.0",
+    "clinton": "0.14.0",
+    "conventional-changelog-cli": "2.1.1",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "4.3.0",
+    "mversion": "2.0.1",
+    "nyc": "15.1.0",
+    "xo": "0.35.0"
   },
-  "bugs": {
-    "url": "https://github.com/VovanR/toggle-in-set/issues"
-  },
-  "homepage": "https://github.com/VovanR/toggle-in-set#readme",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+  "clinton": {
+    "rules": {
+      "ava": "off",
+      "filename-case": "off",
+      "use-travis": "off",
+      "xo": "off"
     }
   },
   "xo": {
+    "esnext": false,
     "space": true
+  },
+  "nyc": {
+    "reporter": ["lcov", "text"]
   },
   "husky": {
     "hooks": {
