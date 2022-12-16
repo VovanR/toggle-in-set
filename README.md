@@ -59,8 +59,8 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 [npm-url]: https://npmjs.org/package/toggle-in-set
 [npm-image]: https://img.shields.io/npm/v/toggle-in-set.svg?style=flat-square
 
-[build-url]: https://github.com/VovanR/toggle-in-set/actions?query=workflow%3A%22Tests%22
-[build-image]: https://img.shields.io/github/workflow/status/VovanR/toggle-in-set/Tests?style=flat-square
+[build-url]: https://github.com/VovanR/toggle-in-set/actions/workflows/test-workflow.yml
+[build-image]: https://img.shields.io/github/actions/workflow/status/vovanr/toggle-in-set/test-workflow.yml?branch=master&style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/VovanR/toggle-in-set
 [coveralls-image]: https://img.shields.io/coveralls/VovanR/toggle-in-set.svg?style=flat-square
